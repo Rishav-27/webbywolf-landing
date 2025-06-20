@@ -8,12 +8,12 @@ import { motion } from "framer-motion";
 
 const Section1 = () => {
   return (
-    <div className="w-full px-6 md:px-12 mt-14">
+    <div className="w-full px-6 md:px-12 mt-24">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        viewport={{ once: true }}
+        viewport={{ once: false, amount: 0.5 }} // <- KEY PART
         className="relative flex flex-col md:flex-row bg-white border-l border-t border-gray-300 shadow-md pl-12 pt-12 pb-32 min-h-[950px]"
       >
         {/* Left Side */}
@@ -39,7 +39,7 @@ const Section1 = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.2 }}
-                viewport={{ once: true }}
+                viewport={{ once: false, amount: 0.5 }}
                 className="group flex items-center gap-4 transition-all duration-300 hover:scale-[1.02] cursor-pointer"
               >
                 <Image
@@ -71,7 +71,7 @@ const Section1 = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.5 }}
             className="flex items-center gap-6 mt-12"
           >
             <button className="bg-[#1959AC] text-white px-8 py-4 rounded-md flex items-center gap-3 text-[20px] font-['Inter'] font-semibold tracking-[-0.02em] shadow-md hover:shadow-lg hover:opacity-90 active:scale-95 active:shadow-inner cursor-pointer transition duration-150">
@@ -91,8 +91,8 @@ const Section1 = () => {
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.5 }}
           className="w-full md:w-1/2 flex justify-center items-center mt-12 md:mt-0"
         >
           <Image
