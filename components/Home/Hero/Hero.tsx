@@ -7,7 +7,7 @@ import { z } from "zod";
 import { motion } from "framer-motion";
 
 const emailSchema = z.object({
-  email: z.string().email("Please enter a valid email address")
+  email: z.string().email("Please enter a valid email address"),
 });
 
 const Hero = () => {
@@ -29,12 +29,14 @@ const Hero = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -50 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: false, amount: 0.5 }}
       className="w-full bg-[#f7f6fb] flex flex-col md:flex-row overflow-hidden"
     >
       {/* Left Side: Text */}
-      <div className="w-full md:w-1/2 z-10 pt-[22vh] px-6 md:px-20">
+      <div className="w-full h-screen md:w-1/2 z-10 pt-[22vh] px-6 md:px-20">
         <h1 className="text-[42px] font-bold text-[#222222] mb-4 tracking-[-0.02em] font-['Roboto_Condensed']">
           Lorem ipsum dolor <br />
           sit amet
