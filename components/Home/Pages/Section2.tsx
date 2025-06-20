@@ -11,7 +11,7 @@ const Section2 = () => {
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        viewport={{ once: true }}
+        viewport={{ once: false, amount: 0.5 }} // Trigger every time 50% is visible
         className="relative flex flex-col md:flex-row bg-white shadow-md pt-12 pb-24 min-h-[700px]"
       >
         {/* Left Side */}
@@ -38,7 +38,7 @@ const Section2 = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: idx * 0.2 }}
-                viewport={{ once: true }}
+                viewport={{ once: false, amount: 0.5 }}
                 className="flex items-start gap-4 group transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-md p-2 rounded-md"
               >
                 <Image
@@ -65,7 +65,7 @@ const Section2 = () => {
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.5 }}
           className="w-full md:w-[42%] flex justify-start items-start mt-10"
         >
           <Image
