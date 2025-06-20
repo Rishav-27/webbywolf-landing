@@ -5,7 +5,6 @@ import Image from "next/image";
 import { FaCheckCircle, FaArrowRight } from "react-icons/fa";
 import { z } from "zod";
 import { motion } from "framer-motion";
-import Nav from "../Navbar/Nav";
 
 const emailSchema = z.object({
   email: z.string().email("Please enter a valid email address")
