@@ -1,11 +1,10 @@
 import React from "react";
 
 interface MobileNavProps {
-  showNav: boolean;
   closeNav: () => void;
 }
 
-const MobileNav: React.FC<MobileNavProps> = ({ showNav, closeNav }) => {
+const MobileNav: React.FC<MobileNavProps> = ({ closeNav }) => {
   return (
     <div>
       <div
