@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -11,24 +11,24 @@ const Section3 = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      viewport={{ once: true }}
+      viewport={{ once: false, amount: 0.5 }}
       className="relative w-full h-screen mt-24"
     >
       {/* Background Image */}
       <Image
         src="/images/Banner1.svg"
         alt="Banner Background"
-        layout="fill"
-        objectFit="cover"
-        className="z-0"
+        fill
+        className="z-0 object-cover"
         priority
       />
 
       {/* Logo (Top-Left, slightly right) */}
       <motion.div
         initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.5, duration: 0.6 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.3, duration: 0.6 }}
+        viewport={{ once: false, amount: 0.5 }}
         className="absolute top-10 left-20 z-20"
       >
         <Image src="/images/Logo.svg" alt="Logo" width={120} height={60} />
@@ -39,7 +39,7 @@ const Section3 = () => {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: true }}
+        viewport={{ once: false, amount: 0.5 }}
         className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center text-white px-6 md:px-12"
       >
         {/* Heading */}
@@ -64,10 +64,14 @@ const Section3 = () => {
           morbi feugiat a pulvinar euismod natoque nulla ligula. Tincidunt cursus vitae leo.
         </p>
 
-        {/* Button with Hover Animation */}
-        <button className="bg-white text-[#1959AC] px-6 py-3 rounded-md flex items-center gap-3 text-base font-medium shadow-md hover:shadow-lg hover:scale-105 transition duration-200 cursor-pointer">
+        {/* Button */}
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-white text-[#1959AC] px-6 py-3 rounded-md flex items-center gap-3 text-base font-medium shadow-md hover:shadow-lg transition duration-200 cursor-pointer"
+        >
           Lorem Ipsum <FaArrowRight />
-        </button>
+        </motion.button>
       </motion.div>
     </motion.div>
   );
