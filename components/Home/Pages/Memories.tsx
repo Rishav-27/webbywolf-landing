@@ -24,7 +24,7 @@ const Memories = () => {
           viewport={{ once: false }}
         >
           {/* Text Section */}
-          <div className="space-y-6 pr-10">
+          <div className="space-y-6 pr-10 ">
             <p className="text-sm font-bold tracking-wide text-gray-500 uppercase">
               No Limits
             </p>
@@ -41,7 +41,7 @@ const Memories = () => {
           </div>
 
           {/* Image 1 - bottom left */}
-          <div className="absolute -bottom-20 -left-5 w-[150px] h-[150px] hover:scale-105 hover:shadow-lg transition-all duration-300">
+          <div className="absolute -bottom-20 -left-3 w-[150px] h-[150px] hover:scale-105 hover:shadow-lg transition-all duration-300">
             <Image
               src="/images/danazivov.png"
               alt="Image 1"
@@ -51,7 +51,7 @@ const Memories = () => {
           </div>
 
           {/* Image 2 - bottom right */}
-          <div className="absolute -bottom-20 -right-2 w-[470px] h-[275px] hover:scale-105 hover:shadow-lg transition-all duration-300">
+          <div className="absolute -bottom-20 right-0 w-[540px] h-[275px] hover:scale-105 hover:shadow-lg transition-all duration-300">
             <Image
               src="/images/rektzed.svg"
               alt="Image 2"
@@ -92,7 +92,7 @@ const Memories = () => {
           </div>
 
           {/* Image 5 - top right */}
-          <div className="absolute -top-10 -right-19 hover:scale-105 hover:shadow-lg transition-all duration-300">
+          <div className="absolute -top-10 right-3 hover:scale-105 hover:shadow-lg transition-all duration-300">
             <Image
               src="/images/eugeni.svg"
               alt="Image 5"
@@ -125,7 +125,7 @@ const Memories = () => {
           </div>
 
           {/* Image 8 - bottom right */}
-          <div className="absolute -bottom-20 -right-20 w-[520px] h-[70px] hover:scale-105 hover:shadow-lg transition-all duration-300">
+          <div className="absolute -bottom-20 right-3 w-[530px] h-[70px] hover:scale-105 hover:shadow-lg transition-all duration-300">
             <Image
               src="/images/marketingmagnetr.svg"
               alt="Image 8"
